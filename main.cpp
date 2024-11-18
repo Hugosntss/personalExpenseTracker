@@ -22,7 +22,12 @@ int main() {
             case 3:
                 saveTransactions(transactions, filename);
                 break;
-   
+            case 4:
+                loadTransactions(transactions, filename);
+                break;
+            case 5:
+                generateSummary(transactions);
+                break;
             case 6:
                 std::cout << "Goodbye!\n";
                 break;
