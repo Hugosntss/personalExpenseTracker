@@ -69,4 +69,7 @@ Simple ``if`` checks ensure the file is opened successfully before reading or wr
 
 
 Explaining video:
-# soon
+
+https://github.com/user-attachments/assets/38d2b9fc-413a-46bc-93e7-1adf5e7fcd91
+
+<sub><b>Thanks for watching the video, and for reading about my project</b></sub>
