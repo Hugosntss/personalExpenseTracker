@@ -44,3 +44,22 @@ void saveTransactions(const std::vector<Transaction>& transactions, const std::s
     std::cout << "Transactions saved to " << filename << " successfully!\n";
 }
 
+void loadTransactions(std::vector<Transaction>& transactions, const std::string& filename) {
+    std::ifstream file(filename);
+    if (!file) {
+        std::cerr << "Error loading from file.\n";
+        return;
+    }
+    Transaction t;
+    std::string line;
+    while (std::getline(file, line)) {
+        size_t pos1 = line.find(',');
+        size_t pos2 = line.rfind(',');
+        t.date = line.substr(0, pos1);
+        t.category = line.substr(pos1 + 1, pos2 - pos1 - 1);
+        t.amount = std::stod(line.substr(pos2 + 1));
+        transactions.push_back(t);
+    }
+    file.close();
+    std::cout << "Transactions loaded from " << filename << " successfully!\n";
+}
