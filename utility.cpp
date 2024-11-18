@@ -11,7 +11,7 @@ void generateSummary(const std::vector<Transaction>& transactions) {
     std::cout << "\nSummary:\n";
     std::cout << "Total Income: $" << std::fixed << std::setprecision(2) << totalIncome << "\n";
     std::cout << "Total Expenses: $" << -totalExpenses << "\n";
-
+    std::cout << "Net Savings: $" << totalIncome + totalExpenses << "\n";
 }
 
 void displayMenu() {
